@@ -1,1 +1,58 @@
 Link para download do Git: https://github.com/Elainecristina3008/dio-desafio-gitub-phillips.git
+
+
+Alguns comandos Git:
+
+git init - cria novo repositório  local
+git config --global user.name - usuário que irá mexer no projeto
+git config --global user.email - email do usuário
+git config -l   <listar todas as configurações>
+git remote add origin 
+git commit -m  - ‘mensagem para entender o que foi feito (será feito) pelo comando
+git status - verifica status dos arquivos’.
+git fetch - baixa as branchs da remota para a local
+
+git pull origin branch --allow-unrelated-histories para não salvar o histórico dos commits na branch remota
+
+git add  - adicionar na unstage
+git log --oneline  - histórico de commits - histórico de atualizações - Ctrl+c (linux) ou q(windows) para sair do histórico
+git checkout master - apontando para branch master
+git commit -am - adicionar e comitar
+git clone + link do repositório - copia do repositório remoto para o local (Clona)
+cd .. - sair da pasta.
+git rm - deletar arquivo
+git mv - renomear arquivo
+mkdir + nome da pasta - criar pasta nova pelo terminal
+nano + nome do arquivo - criar novo arquivo
+git checkout - arquivo volta ao estado anterior
+
+DESFAZENDO TODAS AS ALTERAÇÕES
+
+git reset - geralmente é utilizado com --hard - todas as alterações serão desfeitas - as commitadas e as pendentes.
+
+BRANCHES - Separa versões do projeto
+git branch - lista a branches existentes
+git branch <nome> - Criar uma branch
+git checkout <nome da branch> - alterna a branch
+git checkout -b <nome da branch> - cria e seta a branch
+git branch -d ou git --delete <nome branch> - deleta uma branch
+
+git merge <nome da branch> - vai unir os códigos da branch atual com a branch que for indicada
+
+OBS: Modified - arquivo modificado pronto para o commit
+OBS 2.: Ao alterar a branch podemos levar alterações que não foram commitadas junto, o ideal é fazer o commit antes de alterar a branch.
+
+Caso seja necessário mudar a abordagem do sistema, ou mudar o códico e não perder o que foi feito até o momento, o comando git stash, após o comando o branch é resetado para a sua versão de acordo com o repositório. O código resetado vai para a stash do git
+
+git stash list - lista todas as stashes criadas
+git stash apply idDaStash - recupera a stash criada
+git stash clear - deleta todas as stashes
+git stash drop idDaStash - deleta uma stash específica
+
+TAG - serve cmo checkpoint da branch
+
+git tag -a nomedatag -m “mensagem da tag”  - criando uma tag
+git show nomedatag - verifica o conteúdo das tags 
+git checkout nomedatag - troca de tag
+git push origin nomeDaTag - enviando as tags para o servidor
+git push origin --tags - envia mais de uma tag para o servidor
